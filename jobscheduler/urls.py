@@ -19,13 +19,14 @@ from . import views
 # from django.conf.urls import url
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title='Pastebin API')
+schema_view = get_swagger_view(title='my project')
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('api/posts', views.PostList.as_view()),
     path('create/posts', views.Create.as_view()),
     path('api/posts/<int:pk>/sendemail', views.sendemail.as_view()),
     # path('create/posts', views.Create.as_view()),
-    path('api-auth/', include('rest_framework.urls')),
-    re_path(r'^$', schema_view),
+    # path('api-auth/', include('rest_framework.urls')),
+    path('', schema_view),
+    path('accounts/',include('rest_framework.urls')),
 ]

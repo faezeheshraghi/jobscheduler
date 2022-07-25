@@ -1,0 +1,7 @@
+Django==2.1.3
+gunicorn==19.8.0
+# previous stuff Django etc...
+djangorestframework
+django-rest-swagger==2.1.1
+django_apscheduler
+schedule
